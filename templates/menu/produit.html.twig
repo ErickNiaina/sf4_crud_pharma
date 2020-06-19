@@ -1,0 +1,24 @@
+<li class="nav-item has-treeview menu-open">
+    <a href="#" class="nav-link" style="background-color:yellowgreen;">
+        {# <i class="nav-icon fas fa-th"></i> #}
+        <i class="nav-icon fas  fa-industry"></i>
+        <p>
+            Produit
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview sous-menu-sidebar-left">
+        <li class="nav-item">
+            <a href="{{path('add_product')}}" class="nav-link">
+                <i class="nav-icon fas fa-plus-circle"></i>
+                <p>Ajouter produit</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{path('product')}}" class="nav-link">
+                <i class="fas fa-list-alt"></i>
+                <p>Listes des produits</p>
+            </a>
+        </li>
+    </ul>
+</li>

@@ -1,0 +1,144 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Categorie{% endblock %}
+{% block titre_contenu %}Vue d'une categorie{% endblock %}
+{% block body %}
+        <body class="sidebar-mini sidebar-collapse" style="height: auto;">
+            <div class="wrapper">
+            <div class="content-wrapper" style="min-height: 1416.81px;">
+                
+                <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>Detail d'une</h1>
+                    </div>
+                    </div>
+                </div>
+                </section>
+            
+                
+                <section class="content">
+            
+                
+                <div class="card">
+                    <div class="card-header">
+                    <h3 class="card-title">Categorie</h3>
+            
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                        <i class="fas fa-minus"></i></button>
+                        <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
+                        <i class="fas fa-times"></i></button>
+                    </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="animated fadeInRight delay-1s content">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="clearfix">
+                                                    <div class="float-right">
+                                                        <ul class="pagination">
+                                                            <li class="page-item noborder litext"><a class="page-link" data-role="button" data-iconpos="left" href="{{path('category')}}">Retour liste</a></li>
+                                                            <li class="page-item"><a class="page-link" data-role="button" data-icon="arrow-l" data-iconpos="left" href="{{path('category')}}">></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                    <table class="table table-responsive-md table-condensed">
+                                                        <tr>
+                                                            <th class="fieldrequired">#</th>
+                                                            <td>
+                                                                <div class="refid">{{onecategory.id}}</div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="nowrap">libelle</th>
+                                                            <td>{{onecategory.libelle}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="nowrap">Code</td>
+                                                                <td>
+                                                                    {{onecategory.codecategory}}
+                                                                </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="nowrap">Date de création :</th>
+                                                            <td>{{onecategory.creeLe is not null ? onecategory.creele|date("d/m/Y H:i:s") : onecategory.creele}} </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="nowrap">Cré(e) Par :</th>
+                                                            <td>{{onecategory.creePar}} </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="nowrap">Date de modifcation :</th>
+                                                            <td>{{onecategory.modifieLe is not null ? onecategory.modifieLe|date("d/m/Y H:i:s") : onecategory.modifieLe}} </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="nowrap">Modifié(e) Par :</th>
+                                                            <td>{{onecategory.modifiePar}} </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="nowrap">Famille :</th>
+                                                            <td>{{onecategory.family.libelle}} </td>
+                                                        </tr>
+                                                    </table>
+                                                <br>
+                                                <div class="clearfix">
+                                                    <div class="float-right">
+                                                        <div class="float-right"><a class="btn btn-outline-success" href="{{path('category_edit',{'id': onecategory.id})}}">Modifier</a>&nbsp;&nbsp;
+                                                            <a class="btn btn-outline-danger" href="{{ path('category_delete', {'id': onecategory.id}) }}">Supprimer</a></div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+            
+            <footer class="main-footer">
+                <div class="float-right d-none d-sm-block">
+                <b>Version</b> 3.0.3
+                </div>
+                <strong>Copyright © 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
+                reserved.
+            </footer>
+            
+            <!-- Control Sidebar -->
+            
+            <div id="sidebar-overlay"></div></div>
+            <!-- ./wrapper -->
+            
+            <!-- jQuery -->
+            <script src="../../plugins/jquery/jquery.min.js"></script>
+            <!-- Bootstrap 4 -->
+            <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <!-- AdminLTE App -->
+            <script src="../../dist/js/adminlte.min.js"></script>
+            <!-- AdminLTE for demo purposes -->
+            <script src="../../dist/js/demo.js"></script>
+            
+            
+            </body>
+  {% endblock %}
+  
+
+
+
+
+           
+

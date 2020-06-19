@@ -1,0 +1,33 @@
+<aside class="main-sidebar sidebar-light-primary elevation-1">
+    <a href="#" class="brand-link" data-widget="pushmenu">
+        <img src="{{server_url()}}/images/med.jpg" alt="Bio" width="50%" height="30%">
+        <span class="brand-text font-weight-light title-text" style="visibility: hidden;">pharmaco</span>
+    </a>
+  
+    <div class="sidebar">
+        <nav class="mt-2 menu-sidebar-left">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                {% include 'menu/categorie.html.twig' %}
+                {% include 'menu/laboratoire.html.twig' %}
+                {% include 'menu/produit.html.twig' %}
+                {% include 'menu/famille_categorie.html.twig' %}
+                {% include 'menu/user.html.twig' %}
+            </ul>
+        </nav>
+  
+        
+    </div>
+   
+  </aside>
+  <aside class="control-sidebar control-sidebar-light">
+      <div class="">
+          <ul id="menu-right-mobile" class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="true">
+              <li class="nav-item has-treeview menu-open">
+                      <li class="nav-item">
+                          <a href="" class="nav-link active">PHARMAPLUS</a>
+                      </li>
+              </li>
+          </ul>
+      </div>
+  </aside>
+  
